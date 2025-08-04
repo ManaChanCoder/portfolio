@@ -12,7 +12,7 @@ dotenv.config();
 // middleware
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: ["https://rhogen-portfolio.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
