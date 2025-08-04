@@ -22,7 +22,7 @@ app.use(express.json());
 // routes
 app.use("/contact", messageRoute);
 
-const port = Number(process.env.PORT);
+const port = Number(process.env.PORT) || 3000;
 
 app.listen(port, () => {
   connectionDB();
