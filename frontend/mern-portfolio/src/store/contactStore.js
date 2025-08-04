@@ -8,7 +8,7 @@ const contactStore = create((set) => ({
   sendMessage: async (contactData, isDark) => {
     set({ loading: true, errorMessage: "" });
 
-    const request = fetch("http://localhost:3000/contact/send", {
+    const request = fetch("https://rhogen-portfolio.onrender.com/contact/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
