@@ -10,11 +10,22 @@ const app = express();
 dotenv.config();
 
 // middleware
+const allowedOrigins = [
+  "https://portfolio-mpljl6i1z-manachancoders-projects.vercel.app",
+  "http://localhost:5173", // optional: local dev
+];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
- 
     credentials: true,
   })
 );
