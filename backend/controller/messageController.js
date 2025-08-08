@@ -6,6 +6,11 @@ import { sendEmail } from "../utils/sendEmail.js";
 export const sendMessage = async (req, res) => {
   const { firstName, lastName, email, message } = req.body;
 
+  console.log(firstName)
+  console.log(lastName)
+  console.log(email)
+  console.log(message)
+
   if (!firstName || !lastName || !email || !message) {
     return res.status(400).json({
       success: false,
@@ -19,6 +24,7 @@ export const sendMessage = async (req, res) => {
     email: email,
     message: message,
   };
+  console.log(rawData)
 
   try {
     await Contact.create(rawData);
