@@ -10,10 +10,17 @@ import GradImg from "../../assets/grad-img.png";
 const Home = () => {
   const setHomeRef = scrollStore((state) => state.setHomeRef);
   const homeRef = useRef(null);
+  const contactRef = scrollStore((state) => state.contactRef);
 
   useEffect(() => {
     setHomeRef(homeRef);
   }, []);
+
+  const scrollTo = (ref) => {
+    if (ref?.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div ref={homeRef} className={`px-10 h-autos`}>
@@ -34,7 +41,10 @@ const Home = () => {
             websites. I'm eager to contribute to collaborative teams and grow as
             a developer in the tech industry.
           </span>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white tracking-normal sm:tracking-wide cursor-pointer px-2 py-1 sm:px-3 sm:py-1.5 mt-3 rounded-md">
+          <button
+            onClick={() => scrollTo(contactRef)}
+            className="bg-blue-500 hover:bg-blue-600 text-white tracking-normal sm:tracking-wide cursor-pointer px-2 py-1 sm:px-3 sm:py-1.5 mt-3 rounded-md"
+          >
             Contact
           </button>
         </div>
