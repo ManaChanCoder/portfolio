@@ -29,7 +29,7 @@ export const sendMessage = async (req, res) => {
       html: `
         <div style="font-family: sans-serif; padding: 20px;">
         <h2 style="color: #0d6efd;">New Message from ${firstName} ${lastName}</h2>
-        <p><strong>Email:</strong></p>
+        <p><strong>Sender Email: ${email}</strong></p>
         <p>${message}</p>
         </div>
         `,
