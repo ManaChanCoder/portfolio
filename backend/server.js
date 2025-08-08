@@ -11,7 +11,7 @@ dotenv.config();
 
 // middleware
 const allowedOrigins = [
-  "https://portfolio-mpljl6i1z-manachancoders-projects.vercel.app",
+  "portfolio-mwal8e50r-manachancoders-projects.vercel.app",
   "http://localhost:5173", // optional: local dev
 ];
 
