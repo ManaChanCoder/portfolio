@@ -8,6 +8,7 @@ import About from "./components/pages/About";
 import Project from "./components/pages/Project";
 import Resume from "./components/pages/Resume";
 import Contact from "./components/pages/Contact";
+import ScrollFade from "./components/shared/ScrollFade";
 
 const App = () => {
   return (
@@ -18,15 +19,30 @@ const App = () => {
             path="/"
             element={
               <>
-                <Home />
-                <About />
-                <Project />
-                <Contact />
+                <ScrollFade>
+                  <Home />
+                </ScrollFade>
+                <ScrollFade>
+                  <About />
+                </ScrollFade>
+                <ScrollFade>
+                  <Project />
+                </ScrollFade>
+                <ScrollFade>
+                  <Contact />
+                </ScrollFade>
               </>
             }
           />
         </Route>
-        <Route path="/resume" element={<Resume />} />
+        <Route
+          path="/resume"
+          element={
+            <ScrollFade>
+              <Resume />
+            </ScrollFade>
+          }
+        />
       </Routes>
     </div>
   );
