@@ -2,33 +2,36 @@ import React, { useEffect, useRef } from "react";
 
 // store
 import scrollStore from "../../store/scrollStore";
+import themeStore from "../../store/themeStore";
 
-// image
-import Mcgi from "../../assets/projects/mcgi.png";
-import PetsvilleHome from "../../assets/projects/petsville-home.png";
-import CrashCourse from "../../assets/projects/ecommerce.png";
+// icons
+import { FiActivity } from "react-icons/fi";
+import { FaLaptopCode } from "react-icons/fa";
 
 const Project = () => {
   const setProjectRef = scrollStore((state) => state.setProjectsRef);
   const projectsRef = useRef(null);
+  const isDark = themeStore((state) => state.isDark);
   const webProjects = [
     {
-      title: "MCGI Biometric Attendance",
+      title: "Todo App",
       description:
-        "The MCGI Biometric Attendance project is a web-based system designed to streamline attendance tracking using biometric data. It allows users to securely log in, record attendance in real time, and view logs through a user-friendly interface. An admin dashboard enables efficient user and attendance management. The system ensures accuracy and automation in attendance reporting. Built using a full-stack approach with tools like MERN, Zustand for state management, and Tailwind CSS for clean, responsive styling, the platform offers a smooth and modern user experience.",
-      image: Mcgi,
+        "My Todo App is a simple yet practical task management application designed to help users stay organized and productive. It allows users to add, edit, and delete tasks with ease while keeping track of their progress in real-time. The app supports a clean and responsive UI, making it accessible across devices. It also includes features like search and filtering to quickly find tasks, along with a theme toggle for a personalized experience. Built with React, Zustand, and Tailwind, this project showcases my growing skills in modern frontend development.",
+      image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg",
+      url: "https://todo-app-rose-omega.vercel.app/",
     },
     {
       title: "Petsville",
       description:
         "Petsville is an e-commerce web application focused on selling pet products such as food, accessories, and essentials. It features a user-friendly interface for browsing and managing items, with smooth UI built using Tailwind CSS. The app uses Firebase for real-time database and authentication, providing seamless product management and a responsive shopping experience for pet lovers.",
-      image: PetsvilleHome,
+      image:
+        "https://images.pexels.com/photos/33420572/pexels-photo-33420572.jpeg",
     },
     {
       title: "MERN Crash Course",
       description:
         "This eCommerce web application provides a complete shopping experience with features like product browsing, user registration, cart management, and secure checkout. Built with the MERN stack, it handles both user and admin functionalities. The interface is styled with Chakra UI for a clean, responsive layout and smooth user interactions.",
-      image: CrashCourse,
+      image: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg",
     },
   ];
 
@@ -40,31 +43,46 @@ const Project = () => {
       <span className="text-2xl sm:text-4xl font-semibold text-center block sm:mb-10">
         Projects
       </span>
-      <div className="flex flex-col items-center gap-5">
-        <div className="flex flex-col gap-5 items-center">
-          {webProjects.map((proj, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 justify-center">
+        {webProjects.map((proj, index) => (
+          <div
+            className={`shadow-2xl rounded-xl ${
+              isDark ? "bg-white  text-black" : ""
+            }`}
+          >
             <div
-              className={`flex flex-col sm:flex-row sm:items-center gap-5 bg-transparent ${
-                index === 1 ? "sm:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col h-full justify-between gap-3 bg-transparent pb-5 `}
               key={index}
             >
-              <section>
-                <h3 className="text-lg font-semibold tracking-wider text-center sm:text-left">
-                  {proj.title}
-                </h3>
-                <span className="block text-sm tracking-wide mt-2">
-                  {proj.description}
-                </span>
-              </section>
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="rounded-xl w-fit sm:w-2/4"
+                className="rounded-tl-xl rounded-tr-xl w-full h-2/5 object-cover"
               />
+              <section className="flex-1">
+                <h3 className="text-lg font-semibold tracking-wider px-3">
+                  {proj.title}
+                </h3>
+                <span className="block text-sm tracking-wide mt-1 px-3">
+                  {proj.description}
+                </span>
+              </section>
+
+              <div className="flex justify-end gap-5 pr-3">
+                <a href={proj.url}>
+                  <FiActivity
+                    size={20}
+                    className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-blue-300"
+                  />
+                </a>
+                <FaLaptopCode
+                  size={20}
+                  className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-fuchsia-800"
+                />
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
