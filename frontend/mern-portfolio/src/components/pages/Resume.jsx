@@ -111,7 +111,7 @@ const Resume = () => {
 
             <a
               href="https://github.com/ManaChanCoder"
-              className="my-5 block text-blue-500"
+              className="mt-5 block text-blue-500"
               target="_blank"
             >
               <span className={isDark ? "text-white" : "text-black"}>
@@ -121,7 +121,7 @@ const Resume = () => {
             </a>
             <a
               href="https://github.com/ManaChanCoder"
-              className="my-5 block text-blue-500"
+              className="mb-5 block text-blue-500"
               target="_blank"
             >
               <span className={isDark ? "text-white" : "text-black"}>
