@@ -119,6 +119,16 @@ const Resume = () => {
               </span>{" "}
               https://github.com/ManaChanCoder
             </a>
+            <a
+              href="https://github.com/ManaChanCoder"
+              className="my-5 block text-blue-500"
+              target="_blank"
+            >
+              <span className={isDark ? "text-white" : "text-black"}>
+                Portfolio:
+              </span>{" "}
+              https://portfolio-rouge-kappa-51psbs5zyi.vercel.app
+            </a>
 
             <h3 className="font-semibold uppercase text-center">address</h3>
             <span className="text-center">
