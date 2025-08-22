@@ -120,7 +120,7 @@ const Resume = () => {
               https://github.com/ManaChanCoder
             </a>
             <a
-              href="https://github.com/ManaChanCoder"
+              href="https://portfolio-rouge-kappa-51psbs5zyi.vercel.app"
               className="mb-5 block text-blue-500"
               target="_blank"
             >
