@@ -21,18 +21,19 @@ const Project = () => {
       url: "https://todo-app-rose-omega.vercel.app/",
     },
     {
-      title: "Petsville",
-      description:
-        "Petsville is an e-commerce web application focused on selling pet products such as food, accessories, and essentials. It features a user-friendly interface for browsing and managing items, with smooth UI built using Tailwind CSS. The app uses Firebase for real-time database and authentication, providing seamless product management and a responsive shopping experience for pet lovers.",
-      image:
-        "https://images.pexels.com/photos/33420572/pexels-photo-33420572.jpeg",
-    },
-    {
       title: "MERN Crash Course",
       description:
         "This eCommerce web application provides a complete shopping experience with features like product browsing, user registration, cart management, and secure checkout. Built with the MERN stack, it handles both user and admin functionalities. The interface is styled with Chakra UI for a clean, responsive layout and smooth user interactions.",
       image: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg",
     },
+    {
+      title: "Petsville",
+      description:
+        "Petsville is a user-friendly e-commerce web application and our Capstone Project, designed for pet owners to conveniently browse and purchase pet products. It allows users to explore categories like food, toys, and accessories, add items to the cart, and track orders in real-time. The app features a clean and responsive interface, ensuring seamless navigation across devices. Additional functionalities include search, profile management, and dynamic cart and order tracking for a personalized shopping experience. Built with React, Firebase, and Tailwind CSS, this project highlights my ability to integrate modern frontend technologies with cloud-based backend services.",
+      image:
+        "https://images.pexels.com/photos/16395151/pexels-photo-16395151.jpeg",
+      url: "https://capstone-project-ecru-eight.vercel.app"
+    }
   ];
 
   useEffect(() => {
