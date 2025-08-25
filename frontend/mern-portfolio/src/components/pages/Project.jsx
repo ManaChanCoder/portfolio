@@ -21,10 +21,11 @@ const Project = () => {
       url: "https://todo-app-rose-omega.vercel.app/",
     },
     {
-      title: "MERN Crash Course",
+      title: "Phantom Template",
       description:
-        "This eCommerce web application provides a complete shopping experience with features like product browsing, user registration, cart management, and secure checkout. Built with the MERN stack, it handles both user and admin functionalities. The interface is styled with Chakra UI for a clean, responsive layout and smooth user interactions.",
+        "My Phantom Template is a sleek and modern starter project built using React and Bootstrap, designed to provide developers with a flexible foundation for creating responsive websites. It features clean layouts, reusable components, and a mobile-first design approach to ensure seamless viewing across devices. The template includes sections for showcasing content, navigation menus, and interactive elements, making it adaptable for portfolios, landing pages, or business websites. With its integration of Bootstrap’s utility classes and React’s component-based architecture, this project highlights my ability to blend design frameworks with modern frontend development practices.",
       image: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg",
+      url: "phantom-template.vercel.app"
     },
     {
       title: "Petsville",
