@@ -25,7 +25,7 @@ const Project = () => {
       description:
         "My Phantom Template is a sleek and modern starter project built using React and Bootstrap, designed to provide developers with a flexible foundation for creating responsive websites. It features clean layouts, reusable components, and a mobile-first design approach to ensure seamless viewing across devices. The template includes sections for showcasing content, navigation menus, and interactive elements, making it adaptable for portfolios, landing pages, or business websites. With its integration of Bootstrap’s utility classes and React’s component-based architecture, this project highlights my ability to blend design frameworks with modern frontend development practices.",
       image: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg",
-      url: "phantom-template.vercel.app"
+      url: "https://phantom-template.vercel.app"
     },
     {
       title: "Petsville",
