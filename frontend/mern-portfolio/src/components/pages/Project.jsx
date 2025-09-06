@@ -14,7 +14,7 @@ const Project = () => {
   const isDark = themeStore((state) => state.isDark);
   const webProjects = [
     {
-      title: "Todo App",
+      title: "Bible Note",
       description:
         "My Todo App is a simple yet practical task management application designed to help users stay organized and productive. It allows users to add, edit, and delete tasks with ease while keeping track of their progress in real-time. The app supports a clean and responsive UI, making it accessible across devices. It also includes features like search and filtering to quickly find tasks, along with a theme toggle for a personalized experience. Built with React, Zustand, and Tailwind, this project showcases my growing skills in modern frontend development.",
       image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg",
