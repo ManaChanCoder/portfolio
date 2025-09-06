@@ -38,5 +38,4 @@ const port = Number(process.env.PORT) || 3000;
 
 app.listen(port, () => {
   connectionDB();
-  console.log(`Running connection at ${port}`);
 });
