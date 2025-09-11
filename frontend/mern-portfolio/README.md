@@ -1,12 +1,47 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio built with the **MERN stack** (MongoDB, Express, React, Node), styled with **Tailwind CSS**, and managed with **Zustand**.  
+It showcases my projects, skills, and includes a contact form with dark/light theme support.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Dark/Light theme toggle
+- Project showcase with demo & source links
+- Contact form with toast notifications (Node + Express backend)
+- Responsive design (mobile, tablet, desktop)
+- State management using Zustand
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS, Zustand, React Router
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Full Stack**: MERN
+
+---
+
+## ⚙️ Setup
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/ManaChanCoder/portfolio.git
+   cd portfolio
+   ```
+
+---
+
+# backend
+
+cd backend
+npm install
+npm start
+
+# frontend
+
+cd ../frontend
+npm install
+npm run dev
