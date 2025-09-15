@@ -78,7 +78,7 @@ const Resume = () => {
             </span>
             <ul>
               <li className="">sainggarhogenn@gmail.com</li>
-              <li className="">09926038492</li>
+              <li className="">09923358395</li>
             </ul>
 
             <div className="flex gap-1 my-3 font-semibold">
