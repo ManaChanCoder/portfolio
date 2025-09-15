@@ -65,6 +65,15 @@ const Project = () => {
       url: "https://html-css-challenges-orpin.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/html-css-challenges",
     },
+    {
+      title: "Weather App",
+      description:
+        "The Weather App is a modern web application built using React with TypeScript and Bootstrap for styling. It allows users to search for any city worldwide and view real-time weather data powered by the OpenWeather API. The app fetches current weather conditions including temperature, humidity, wind speed, and weather icons, and displays them in a responsive and visually appealing interface. TypeScript ensures type safety across components and API responses, reducing runtime errors. The app uses Zustand for state management, keeping data like the selected city, weather details, and search results in a central store. Users can type in a city name, see suggestions in a dropdown, and select a city to update the main display. Bootstrap ensures mobile-friendly layouts with grids and cards. The app also handles API errors gracefully and provides a default location (like Manila) if the user hasn’t searched yet. Overall, it’s an interactive, type-safe, and user-friendly project demonstrating modern frontend best practices.",
+      image:
+        "https://images.pexels.com/photos/1486861/pexels-photo-1486861.jpeg",
+      url: "http://weather-app-three-rho-93.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/weather-app",
+    },
   ];
 
   useEffect(() => {
