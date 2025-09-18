@@ -74,6 +74,15 @@ const Project = () => {
       url: "http://weather-app-three-rho-93.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/weather-app",
     },
+     {
+      title: "Generate Password",
+      description:
+        "The React Password Generator is a modern web application built using React, TypeScript, Vite, and Bootstrap 5 that allows users to quickly generate strong, secure passwords for their accounts and applications. The app provides an interactive range slider to select the desired password length and Bootstrap switch buttons to include or exclude numbers, symbols, and uppercase letters, giving users full control over password complexity. With the integration of TypeScript, the project benefits from type safety and more reliable code. Users can easily copy the generated password to their clipboard with a single click, improving convenience. The responsive design, powered by Bootstrap, ensures a clean and user-friendly interface across all devices. This app is lightweight, fast, and ideal for anyone looking to enhance their online security by generating unique, random passwords quickly and efficiently.",
+      image:
+        "https://images.pexels.com/photos/17485678/pexels-photo-17485678.png",
+      url: "https://generate-password-three-rho.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/generate-password",
+    },
   ];
 
   useEffect(() => {
