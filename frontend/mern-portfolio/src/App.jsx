@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // components
 import MainLayout from "./components/layout/MainLayout";
@@ -44,6 +45,7 @@ const App = () => {
           }
         />
       </Routes>
+      <SpeedInsights />
     </div>
   );
 };
