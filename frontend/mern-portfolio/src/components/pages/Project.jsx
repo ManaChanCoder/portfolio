@@ -16,14 +16,22 @@ const Project = () => {
   const projectsRef = useRef(null);
   const isDark = themeStore((state) => state.isDark);
   const webProjects = [
-    // {
-    //   title: "Bible Note",
-    //   description:
-    //     "My Bible note is a simple yet practical task management application designed to help users stay organized and productive. It allows users to add, edit, and delete tasks with ease while keeping track of their progress in real-time. The app supports a clean and responsive UI, making it accessible across devices. It also includes features like search and filtering to quickly find tasks, along with a theme toggle for a personalized experience. Built with React, Zustand, and Tailwind, this project showcases my growing skills in modern frontend development.",
-    //   image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg",
-    //   url: "https://todo-app-rose-omega.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/todo-app",
-    // },
+    {
+      title: "Browser extension manager UI",
+      description:
+        "A simple and elegant Blog Preview Card built using HTML and CSS only. This project demonstrates how to create a responsive, visually appealing blog card that displays a title, author, date, short description, and a “Read More” button—all without any JavaScript. It’s perfect for learning CSS layout, typography, and hover/focus effects for UI design.",
+      image: ExtensionList,
+      url: "https://browser-extension-manager-ui-rho-one.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/browser-extension-manager-ui",
+    },
+    {
+      title: "Bible Note",
+      description:
+        "My Bible note is a simple yet practical task management application designed to help users stay organized and productive. It allows users to add, edit, and delete tasks with ease while keeping track of their progress in real-time. The app supports a clean and responsive UI, making it accessible across devices. It also includes features like search and filtering to quickly find tasks, along with a theme toggle for a personalized experience. Built with React, Zustand, and Tailwind, this project showcases my growing skills in modern frontend development.",
+      image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg",
+      url: "https://todo-app-rose-omega.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/todo-app",
+    },
     // {
     //   title: "Phantom Template",
     //   description:
@@ -32,24 +40,24 @@ const Project = () => {
     //   url: "https://phantom-template.vercel.app/",
     //   codeUrl: "https://github.com/ManaChanCoder/phantom-template",
     // },
-    // {
-    //   title: "Petsville",
-    //   description:
-    //     "Petsville is a user-friendly e-commerce web application and our Capstone Project, designed for pet owners to conveniently browse and purchase pet products. It allows users to explore categories like food, toys, and accessories, add items to the cart, and track orders in real-time. The app features a clean and responsive interface, ensuring seamless navigation across devices. Additional functionalities include search, profile management, and dynamic cart and order tracking for a personalized shopping experience. Built with React, Firebase, and Tailwind CSS, this project highlights my ability to integrate modern frontend technologies with cloud-based backend services.",
-    //   image:
-    //     "https://images.pexels.com/photos/16395151/pexels-photo-16395151.jpeg",
-    //   url: "https://capstone-project-ecru-eight.vercel.app",
-    //   codeUrl: "https://github.com/ManaChanCoder/Capstone-Project",
-    // },
-    // {
-    //   title: "Multi Step Form",
-    //   description:
-    //     "A responsive and user-friendly multi-step form application built with React and Zustand, designed to guide users through a smooth, structured process. The form allows users to enter details step by step, select a subscription plan with options for monthly or yearly pricing, and choose from multiple add-ons to customize their experience. It features a clear progress indicator to track steps, built-in validation for accuracy, and a dynamic live summary that calculates totals before final submission. Zustand provides efficient global state management, ensuring consistent data flow and easy step-to-step navigation, while conditional rendering displays only relevant fields. This project is ideal for onboarding workflows, checkout wizards, subscription management systems, or any modern application requiring clean and intuitive multi-stage input handling.",
-    //   image:
-    //     "https://cdn.pixabay.com/photo/2017/03/21/02/00/list-2160914_1280.png",
-    //   url: "https://multi-step-form-one-ruby.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/multi-step-form",
-    // },
+    {
+      title: "Petsville",
+      description:
+        "Petsville is a user-friendly e-commerce web application and our Capstone Project, designed for pet owners to conveniently browse and purchase pet products. It allows users to explore categories like food, toys, and accessories, add items to the cart, and track orders in real-time. The app features a clean and responsive interface, ensuring seamless navigation across devices. Additional functionalities include search, profile management, and dynamic cart and order tracking for a personalized shopping experience. Built with React, Firebase, and Tailwind CSS, this project highlights my ability to integrate modern frontend technologies with cloud-based backend services.",
+      image:
+        "https://images.pexels.com/photos/16395151/pexels-photo-16395151.jpeg",
+      url: "https://capstone-project-ecru-eight.vercel.app",
+      codeUrl: "https://github.com/ManaChanCoder/Capstone-Project",
+    },
+    {
+      title: "Multi Step Form",
+      description:
+        "A responsive and user-friendly multi-step form application built with React and Zustand, designed to guide users through a smooth, structured process. The form allows users to enter details step by step, select a subscription plan with options for monthly or yearly pricing, and choose from multiple add-ons to customize their experience. It features a clear progress indicator to track steps, built-in validation for accuracy, and a dynamic live summary that calculates totals before final submission. Zustand provides efficient global state management, ensuring consistent data flow and easy step-to-step navigation, while conditional rendering displays only relevant fields. This project is ideal for onboarding workflows, checkout wizards, subscription management systems, or any modern application requiring clean and intuitive multi-stage input handling.",
+      image:
+        "https://cdn.pixabay.com/photo/2017/03/21/02/00/list-2160914_1280.png",
+      url: "https://multi-step-form-one-ruby.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/multi-step-form",
+    },
     // {
     //   title: "QR Code Component",
     //   description:
@@ -59,33 +67,33 @@ const Project = () => {
     //   url: "https://qr-code-component-sigma-lime.vercel.app/",
     //   codeUrl: "https://github.com/ManaChanCoder/qr-code-component",
     // },
-    // {
-    //   title: "Social Link Profile",
-    //   description:
-    //     "This project is a simple social link profile page created using only HTML and CSS. It presents a clean and minimal card-style layout that highlights a profile image, username, short bio, and a list of social media links styled as interactive buttons. The design focuses on simplicity and responsiveness, ensuring the layout adapts well across different screen sizes. This project demonstrates essential frontend skills such as semantic HTML structure, CSS styling, hover effects, and responsive design techniques. It serves as a beginner-friendly exercise in creating practical UI components.",
-    //   image:
-    //     "https://cdn.pixabay.com/photo/2013/10/25/17/26/tree-200795_1280.jpg",
-    //   url: "https://html-css-challenges-orpin.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/html-css-challenges",
-    // },
-    // {
-    //   title: "Weather App",
-    //   description:
-    //     "The Weather App is a modern web application built using React with TypeScript and Bootstrap for styling. It allows users to search for any city worldwide and view real-time weather data powered by the OpenWeather API. The app fetches current weather conditions including temperature, humidity, wind speed, and weather icons, and displays them in a responsive and visually appealing interface. TypeScript ensures type safety across components and API responses, reducing runtime errors. The app uses Zustand for state management, keeping data like the selected city, weather details, and search results in a central store. Users can type in a city name, see suggestions in a dropdown, and select a city to update the main display. Bootstrap ensures mobile-friendly layouts with grids and cards. The app also handles API errors gracefully and provides a default location (like Manila) if the user hasn’t searched yet. Overall, it’s an interactive, type-safe, and user-friendly project demonstrating modern frontend best practices.",
-    //   image:
-    //     "https://images.pexels.com/photos/1486861/pexels-photo-1486861.jpeg",
-    //   url: "http://weather-app-three-rho-93.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/weather-app",
-    // },
-    // {
-    //   title: "Generate Password",
-    //   description:
-    //     "The React Password Generator is a modern web application built using React, TypeScript, Vite, and Bootstrap 5 that allows users to quickly generate strong, secure passwords for their accounts and applications. The app provides an interactive range slider to select the desired password length and Bootstrap switch buttons to include or exclude numbers, symbols, and uppercase letters, giving users full control over password complexity. With the integration of TypeScript, the project benefits from type safety and more reliable code. Users can easily copy the generated password to their clipboard with a single click, improving convenience. The responsive design, powered by Bootstrap, ensures a clean and user-friendly interface across all devices. This app is lightweight, fast, and ideal for anyone looking to enhance their online security by generating unique, random passwords quickly and efficiently.",
-    //   image:
-    //     "https://images.pexels.com/photos/17485678/pexels-photo-17485678.png",
-    //   url: "https://generate-password-three-rho.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/generate-password",
-    // },
+    {
+      title: "Social Link Profile",
+      description:
+        "This project is a simple social link profile page created using only HTML and CSS. It presents a clean and minimal card-style layout that highlights a profile image, username, short bio, and a list of social media links styled as interactive buttons. The design focuses on simplicity and responsiveness, ensuring the layout adapts well across different screen sizes. This project demonstrates essential frontend skills such as semantic HTML structure, CSS styling, hover effects, and responsive design techniques. It serves as a beginner-friendly exercise in creating practical UI components.",
+      image:
+        "https://cdn.pixabay.com/photo/2013/10/25/17/26/tree-200795_1280.jpg",
+      url: "https://html-css-challenges-orpin.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/html-css-challenges",
+    },
+    {
+      title: "Weather App",
+      description:
+        "The Weather App is a modern web application built using React with TypeScript and Bootstrap for styling. It allows users to search for any city worldwide and view real-time weather data powered by the OpenWeather API. The app fetches current weather conditions including temperature, humidity, wind speed, and weather icons, and displays them in a responsive and visually appealing interface. TypeScript ensures type safety across components and API responses, reducing runtime errors. The app uses Zustand for state management, keeping data like the selected city, weather details, and search results in a central store. Users can type in a city name, see suggestions in a dropdown, and select a city to update the main display. Bootstrap ensures mobile-friendly layouts with grids and cards. The app also handles API errors gracefully and provides a default location (like Manila) if the user hasn’t searched yet. Overall, it’s an interactive, type-safe, and user-friendly project demonstrating modern frontend best practices.",
+      image:
+        "https://images.pexels.com/photos/1486861/pexels-photo-1486861.jpeg",
+      url: "http://weather-app-three-rho-93.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/weather-app",
+    },
+    {
+      title: "Generate Password",
+      description:
+        "The React Password Generator is a modern web application built using React, TypeScript, Vite, and Bootstrap 5 that allows users to quickly generate strong, secure passwords for their accounts and applications. The app provides an interactive range slider to select the desired password length and Bootstrap switch buttons to include or exclude numbers, symbols, and uppercase letters, giving users full control over password complexity. With the integration of TypeScript, the project benefits from type safety and more reliable code. Users can easily copy the generated password to their clipboard with a single click, improving convenience. The responsive design, powered by Bootstrap, ensures a clean and user-friendly interface across all devices. This app is lightweight, fast, and ideal for anyone looking to enhance their online security by generating unique, random passwords quickly and efficiently.",
+      image:
+        "https://images.pexels.com/photos/17485678/pexels-photo-17485678.png",
+      url: "https://generate-password-three-rho.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/generate-password",
+    },
     {
       title: "Blog Preview Card",
       description:
@@ -93,14 +101,6 @@ const Project = () => {
       image: BlogPreviewCard,
       url: "https://blog-preview-card-six-beta.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/blog-preview-card",
-    },
-    {
-      title: "Browser extension manager UI",
-      description:
-        "A simple and elegant Blog Preview Card built using HTML and CSS only. This project demonstrates how to create a responsive, visually appealing blog card that displays a title, author, date, short description, and a “Read More” button—all without any JavaScript. It’s perfect for learning CSS layout, typography, and hover/focus effects for UI design.",
-      image: ExtensionList,
-      url: "https://browser-extension-manager-ui-rho-one.vercel.app/",
-      codeUrl: "https://github.com/ManaChanCoder/browser-extension-manager-ui",
     },
   ];
 
