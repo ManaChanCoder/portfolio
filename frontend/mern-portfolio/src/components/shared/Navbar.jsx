@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 ${
+      className={`w-full fixed top-0 z-3 ${
         isDark ? "bg-black text-white border-b" : "bg-white text-black"
       }`}
     >
