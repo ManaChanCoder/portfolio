@@ -94,14 +94,7 @@ const Project = () => {
       url: "https://blog-preview-card-six-beta.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/blog-preview-card",
     },
-    {
-      title: "Browser extension manager UI",
-      description:
-        "A simple and elegant Blog Preview Card built using HTML and CSS only. This project demonstrates how to create a responsive, visually appealing blog card that displays a title, author, date, short description, and a “Read More” button—all without any JavaScript. It’s perfect for learning CSS layout, typography, and hover/focus effects for UI design.",
-      image: ExtensionList,
-      url: "https://browser-extension-manager-ui-rho-one.vercel.app/",
-      codeUrl: "https://github.com/ManaChanCoder/browser-extension-manager-ui",
-    },
+    
   ];
 
   useEffect(() => {
