@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // store
 import scrollStore from "../../store/scrollStore";
@@ -8,14 +8,21 @@ import themeStore from "../../store/themeStore";
 import { FiActivity } from "react-icons/fi";
 import { FaLaptopCode } from "react-icons/fa";
 
+// assets
 import BlogPreviewCard from "../../assets/projects/blog-preview-card.png";
 import ExtensionList from "../../assets/projects/extension-list.png";
+import TicketGenerator from "../../assets/projects/ticket-generator.png";
+import Loading from "../../assets/loading.svg";
 
 const Project = () => {
   const setProjectRef = scrollStore((state) => state.setProjectsRef);
   const projectsRef = useRef(null);
   const isDark = themeStore((state) => state.isDark);
-  const webProjects = [
+
+  const [webProjects, setWebProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const projectsData = [
     {
       title: "Browser extension manager UI",
       description:
@@ -50,13 +57,13 @@ const Project = () => {
       url: "https://multi-step-form-one-ruby.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/multi-step-form",
     },
-     {
-      title: "Phantom Template",
+    {
+      title: "Ticket Generator",
       description:
-        "My Phantom Template is a sleek and modern starter project built using React and Bootstrap, designed to provide developers with a flexible foundation for creating responsive websites. It features clean layouts, reusable components, and a mobile-first design approach to ensure seamless viewing across devices. The template includes sections for showcasing content, navigation menus, and interactive elements, making it adaptable for portfolios, landing pages, or business websites. With its integration of Bootstrap’s utility classes and React’s component-based architecture, this project highlights my ability to blend design frameworks with modern frontend development practices.",
-      image: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg",
-      url: "https://phantom-template.vercel.app/",
-      codeUrl: "https://github.com/ManaChanCoder/phantom-template",
+        "The Ticket Generator is a React + TypeScript application designed to create simple, customizable digital tickets. With an intuitive form interface, users can easily enter their name, email, and GitHub profile link, then upload a profile or avatar image. Once submitted, the app automatically generates a visually clean and responsive ticket layout styled with Bootstrap 5. This project demonstrates the practical use of  React components, TypeScript props, and Bootstrap styling to build a functional UI tool. It can be extended with additional features such as Ticket download (PNG/PDF), QR code integration, or event-based customization. Whether you’re showcasing your frontend skills or experimenting with TypeScript + Bootstrap, this project serves as a great starting point for learning and portfolio building.",
+      image: TicketGenerator,
+      url: "http://ticket-generator-ecru.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/ticket-generator",
     },
     // {
     //   title: "QR Code Component",
@@ -106,75 +113,78 @@ const Project = () => {
 
   useEffect(() => {
     setProjectRef(projectsRef);
+    const timer = setTimeout(() => {
+      setWebProjects(projectsData);
+      setLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <div ref={projectsRef} className="mt-20 px-10">
       <span className="text-2xl sm:text-4xl font-semibold text-center block sm:mb-10">
         Projects
       </span>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
-        {webProjects.map((proj, index) => (
-          <div
-            key={index}
-            className={`shadow-2xl rounded-xl ${
-              isDark ? "bg-white  text-black" : ""
-            }`}
-          >
+
+      {loading ? (
+        <div className="flex justify-center">
+          <img src={Loading} alt="loading..." className="w-20" />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+          {webProjects.map((proj, index) => (
             <div
-              className={`flex flex-col h-full justify-between gap-3 bg-transparent pb-5 `}
               key={index}
+              className={`shadow-2xl rounded-xl ${
+                isDark ? "bg-white text-black" : ""
+              }`}
             >
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="rounded-tl-xl rounded-tr-xl w-full h-[350px] object-cover"
-              />
-              <section className="flex-1">
-                <h3 className="text-lg font-semibold tracking-wider px-3">
-                  {proj.title}
-                </h3>
-                <span className="block text-sm tracking-wide mt-1 px-3">
-                  {proj.description}
-                </span>
-              </section>
-
-              <div className="flex justify-end gap-5 pr-5">
-                <div className="relative group">
-                  <a href={proj.url}>
-                    <FiActivity
-                      size={20}
-                      className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-blue-300"
-                    />
-                  </a>
-                  <span
-                    className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 
-                     px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 
-                     group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    Demo
+              <div className="flex flex-col h-full justify-between gap-3 pb-5">
+                <img
+                  src={proj.image}
+                  alt={proj.title}
+                  className="rounded-tl-xl rounded-tr-xl w-full h-[350px] object-cover"
+                />
+                <section className="flex-1">
+                  <h3 className="text-lg font-semibold tracking-wider px-3">
+                    {proj.title}
+                  </h3>
+                  <span className="block text-sm tracking-wide mt-1 px-3">
+                    {proj.description}
                   </span>
-                </div>
+                </section>
 
-                <div className="relative group">
-                  <a href={proj.codeUrl}>
-                    <FaLaptopCode
-                      size={20}
-                      className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-fuchsia-800"
-                    />
-                  </a>
-                  <span
-                    className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 
-                     px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 
-                     group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    Source Code
-                  </span>
+                <div className="flex justify-end gap-5 pr-5">
+                  <div className="relative group">
+                    <a href={proj.url}>
+                      <FiActivity
+                        size={20}
+                        className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-blue-300"
+                      />
+                    </a>
+                    <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Demo
+                    </span>
+                  </div>
+
+                  <div className="relative group">
+                    <a href={proj.codeUrl}>
+                      <FaLaptopCode
+                        size={20}
+                        className="duration-75 ease-in hover:scale-110 cursor-pointer hover:text-fuchsia-800"
+                      />
+                    </a>
+                    <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Source Code
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
