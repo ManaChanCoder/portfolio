@@ -13,7 +13,7 @@ import BlogPreviewCard from "../../assets/projects/blog-preview-card.png";
 import ExtensionList from "../../assets/projects/extension-list.png";
 import TicketGenerator from "../../assets/projects/ticket-generator.png";
 import Loading from "../../assets/loading.svg";
-import ProductListCart from "../../assets/projects/product-list-cart.png";
+import ProductListCart from "../../assets/projects/product-list-with-cart.png";
 
 const Project = () => {
   const setProjectRef = scrollStore((state) => state.setProjectsRef);
