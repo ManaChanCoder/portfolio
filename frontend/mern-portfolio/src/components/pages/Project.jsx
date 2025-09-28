@@ -13,6 +13,7 @@ import BlogPreviewCard from "../../assets/projects/blog-preview-card.png";
 import ExtensionList from "../../assets/projects/extension-list.png";
 import TicketGenerator from "../../assets/projects/ticket-generator.png";
 import Loading from "../../assets/loading.svg";
+import ProductListCart from "../../assets/projects/product-list-cart.png";
 
 const Project = () => {
   const setProjectRef = scrollStore((state) => state.setProjectsRef);
@@ -40,13 +41,12 @@ const Project = () => {
       codeUrl: "https://github.com/ManaChanCoder/todo-app",
     },
     {
-      title: "Petsville",
+      title: "Product List & Cart",
       description:
-        "Petsville is a user-friendly e-commerce web application and our Capstone Project, designed for pet owners to conveniently browse and purchase pet products. It allows users to explore categories like food, toys, and accessories, add items to the cart, and track orders in real-time. The app features a clean and responsive interface, ensuring seamless navigation across devices. Additional functionalities include search, profile management, and dynamic cart and order tracking for a personalized shopping experience. Built with React, Firebase, and Tailwind CSS, this project highlights my ability to integrate modern frontend technologies with cloud-based backend services.",
-      image:
-        "https://images.pexels.com/photos/16395151/pexels-photo-16395151.jpeg",
-      url: "https://capstone-project-ecru-eight.vercel.app",
-      codeUrl: "https://github.com/ManaChanCoder/Capstone-Project",
+        "Product List with Cart is a responsive frontend-only project built using React, TypeScript, Bootstrap, and Zustand for state management. The app allows users to browse a list of products, add or remove items from the cart, and view the total cost in real time. Zustand provides a lightweight and scalable way to manage cart state efficiently, while Bootstrap ensures a clean and mobile-friendly layout. TypeScript adds strong typing for better maintainability and fewer bugs. This project is ideal for practicing component-based architecture, reusable UI, and global state management in modern frontend development workflows.",
+      image: ProductListCart,
+      url: "https://product-list-with-cart-silk-three.vercel.app/",
+      codeUrl: "https://github.com/ManaChanCoder/product-list-with-cart",
     },
     {
       title: "Multi Step Form",
