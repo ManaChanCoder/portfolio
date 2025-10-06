@@ -14,6 +14,7 @@ import ExtensionList from "../../assets/projects/extension-list.png";
 import TicketGenerator from "../../assets/projects/ticket-generator.png";
 import Loading from "../../assets/loading.svg";
 import ProductListCart from "../../assets/projects/product-list-with-cart.png";
+import SpaceTour from "../../assets/projects/space-tour.png";
 
 const Project = () => {
   const setProjectRef = scrollStore((state) => state.setProjectsRef);
@@ -65,15 +66,6 @@ const Project = () => {
       url: "http://ticket-generator-ecru.vercel.app/",
       codeUrl: "https://github.com/ManaChanCoder/ticket-generator",
     },
-    // {
-    //   title: "QR Code Component",
-    //   description:
-    //     "This project is a simple yet responsive QR Code component built using modern frontend tools. It is designed to display a QR code inside a clean, card-style layout with a title and supporting text, making it both visually appealing and user-friendly. The goal of the project is to practice fundamental skills in structuring components, applying consistent styling, and ensuring responsiveness across different screen sizes. Though minimal in functionality, it demonstrates attention to layout, design, and accessibility.",
-    //   image:
-    //     "https://cdn.pixabay.com/photo/2021/11/30/00/43/qr-6834147_1280.png",
-    //   url: "https://qr-code-component-sigma-lime.vercel.app/",
-    //   codeUrl: "https://github.com/ManaChanCoder/qr-code-component",
-    // },
     {
       title: "Social Link Profile",
       description:
@@ -84,13 +76,12 @@ const Project = () => {
       codeUrl: "https://github.com/ManaChanCoder/html-css-challenges",
     },
     {
-      title: "Weather App",
+      title: "Space Tourism",
       description:
-        "The Weather App is a modern web application built using React with TypeScript and Bootstrap for styling. It allows users to search for any city worldwide and view real-time weather data powered by the OpenWeather API. The app fetches current weather conditions including temperature, humidity, wind speed, and weather icons, and displays them in a responsive and visually appealing interface. TypeScript ensures type safety across components and API responses, reducing runtime errors. The app uses Zustand for state management, keeping data like the selected city, weather details, and search results in a central store. Users can type in a city name, see suggestions in a dropdown, and select a city to update the main display. Bootstrap ensures mobile-friendly layouts with grids and cards. The app also handles API errors gracefully and provides a default location (like Manila) if the user hasn’t searched yet. Overall, it’s an interactive, type-safe, and user-friendly project demonstrating modern frontend best practices.",
-      image:
-        "https://images.pexels.com/photos/1486861/pexels-photo-1486861.jpeg",
-      url: "http://weather-app-three-rho-93.vercel.app/",
-      codeUrl: "https://github.com/ManaChanCoder/weather-app",
+        "A responsive multi-page website built with React, TypeScript, React Router DOM, and Bootstrap. Space Tourism is an interactive web experience that showcases destinations, crew members, and technologies for space exploration. The site is designed to adapt across desktop, tablet, and mobile screens with dynamic content and smooth page transitions.",
+      image: SpaceTour,
+      url: "https://moonlit-meerkat-9cfe47.netlify.app/",
+      codeUrl: "https://github.com/ManaChanCoder/space-tour",
     },
     {
       title: "Generate Password",
